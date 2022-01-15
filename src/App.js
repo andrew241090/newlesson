@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-import css from  './App.module.css'
-import Users from "./components/Users/Users";
-import Posts from "./components/Posts/Posts";
-import Comments from "./components/Comments/Comments";
+import css from "./App.css"
 
 const App = () => {
+    const [flight,setFlight]= useState([])
+
+    useEffect(()=> {
+        fetch('https://api.spacexdata.com/v3/launches/')
+            .then(value => value.json())
+            .then(value => {
+                setFlight(value.filter(value => value.launch_year !== '2020'));
+            });
+    },[])
+
     return (
-        <div>
-          <div className={css.wrap}>
-              <Users/>
-              <Posts/>
-          </div>
-           <div><Comments/></div>
+        <div className={'wrap'}>
+            {
+                flight.map(value => <div className={'main'} key={value.flight_number}>
+                {value.mission_name} -- {value.launch_year}
+                <img src={value.links.mission_patch} alt="mission_patch"/>
+                    </div>)
+            }
         </div>
     );
-};
+}
 
 export default App;

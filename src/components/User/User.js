@@ -10,6 +10,8 @@ const {id, name, email, surname, address}=props;
             <div>SURNAME: {surname}</div>
             <div>EMAIL: {email}</div>
             <div>STREET: {address.street}</div>
+            <div>CITY: {address.city}</div>
+            <div>ZIPCODE: {address.zipcode}</div>
         </div>
     );
 };

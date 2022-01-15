@@ -7,7 +7,7 @@ const User = ({user, getUser}) => {
     return (
         <div className={"main"}>
             <div>{id}) {name}</div>
-            <button onClick={()=>getUser(user)}>Details</button>
+            <button onClick={ () => getUser(user)}>Details</button>
         </div>
 
     );

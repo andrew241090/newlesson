@@ -3,7 +3,8 @@ import {userService} from "../../services/user.service";
 import User from "../User/User";
 
 
-const Users = (getUser) => {
+
+const Users = ({getUser}) => {
     const [users, setUsers] = useState([]);
 
     useEffect(()=> {

@@ -7,11 +7,11 @@ import Userdetails from "./components/UserDetails/Userdetails";
 import {postService} from "./services/post.service";
 
 const App = () => {
-    const [user, setUser] = useState(null);
+    const [user, setUserId] = useState(null);
     const [posts,setPost] = useState([]);
 
     const getUser = (user) => {
-        setUser(user)
+        setUserId(user)
         setPost([])
     }
     const getUserId = (id) => {

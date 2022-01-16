@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Post = ({posts:{id,userid,title,body}}) => {
+const Post = ({post}) => {
+    const {id,userId,title,body}=post;
     return (
         <div>
             <div>ID: {id}</div>
-            <div>USERID :{userid}</div>
+            <div>USERID :{userId}</div>
             <div>TITLE: {title}</div>
             <div>BODY: {body}</div>
         </div>

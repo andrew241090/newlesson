@@ -25,7 +25,7 @@ postService.getByUserId(id).then(value => setPost(...[value]))
                 <Users getUser={getUser}/>
                 {user && <Userdetails user={user} getUserId={getUserId}/>}
             </div>
-            {posts.length && <Posts posts={posts}/>}
+            {!!posts.length && <Posts posts={posts}/>}
         </div>
     );
 };

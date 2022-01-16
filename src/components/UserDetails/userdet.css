@@ -1,10 +1,7 @@
-.main{
-    display: flex;
-    padding: 0px 10px;
-    align-items: center;
-    text-align: center;
+.userdet{
     width: 300px;
-    height:35px;
+    height: 100px;
+    padding-left: 10px;
     justify-content: space-between;
     border: 2px solid black;
     border-radius: 5px;

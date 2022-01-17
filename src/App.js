@@ -1,6 +1,5 @@
 import React from 'react';
 
-import css from "./App.css"
 import Flights from "./components/Flights/Flights";
 
 

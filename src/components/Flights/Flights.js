@@ -1,4 +1,5 @@
 import {useState,useEffect} from "react";
+import Flight from "../Flight/Flight";
 
 const Flights = () => {
     const [flight,setFlight]= useState([])
@@ -15,7 +16,7 @@ const Flights = () => {
         <div className={'wrap'}>
             {
                 flight.map(value => <Flight key={value.flight_number} mission_name={value.mission_name}  launch_year={value.launch_year}
-                   img={value.links.mission_patch}/>)}
+                   mission_patch={value.links.mission_patch}/>)}
         </div>
     );
 }

@@ -3,7 +3,7 @@ img{
 }
 
 .main{
-
+    background: aliceblue;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
